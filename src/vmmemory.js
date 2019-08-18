@@ -16,7 +16,7 @@ export default class VMMemory {
 		return this.view.getUint8( addr );
 	}
 
-	// 8buts
+	// 8bits
 	storeByte( addr, value ) {
 		if ( addr < 0 || addr >= MEMORY_SIZE ) {
 			return false;
@@ -57,7 +57,7 @@ export default class VMMemory {
 		return true;
 	}
 
-	fetchManu( addr, size ) {
+	fetchMany( addr, size ) {
 		if ( addr < 0 || addr + size - 1 >= MEMORY_SIZE ) {
 			return null;
 		}
